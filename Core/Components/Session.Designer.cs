@@ -1,6 +1,6 @@
 ﻿namespace Productivity_Signal.Core.Components
 {
-    partial class NavigationButton
+    partial class Session
     {
         /// <summary>
         /// Required designer variable.

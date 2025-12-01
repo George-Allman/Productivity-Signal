@@ -47,10 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Components\NavigationButton.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Components\NavigationButton.Designer.cs">
       <DependentUpon>NavigationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Components\Session.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Components\Session.Designer.cs">
+      <DependentUpon>Session.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\ProductivitySignal.cs">
       <SubType>Form</SubType>
@@ -61,9 +67,6 @@
     <Compile Include="Core\Program.cs" />
     <Compile Include="Core\UI\Theme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Core\Components\NavigationButton.resx">
-      <DependentUpon>NavigationButton.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Core\ProductivitySignal.resx">
       <DependentUpon>ProductivitySignal.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,6 +93,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cameraIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graphIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingsIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

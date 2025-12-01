@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Productivity_Signal.Core.Components;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,9 @@ namespace Productivity_Signal
         public ProductivitySignal()
         {
             InitializeComponent();
-            navigationButton1.activate();
+            Session session = new Session();
+            this.Controls.Add(session);
+            session.BringToFront();
         }
     }
 }
