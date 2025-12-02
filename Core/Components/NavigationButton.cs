@@ -12,10 +12,24 @@ namespace Productivity_Signal.Core.Components
 {
     public partial class NavigationButton : Control
     {
+        public event EventHandler ButtonClicked;
+
+
         private bool selected = true;
-        private bool click = false;
+        private bool clicked = false;
         private bool hover = false;
         private Image icon;
+        private UserControl tab;
+
+        public UserControl Tab
+        {
+            get => tab;
+            set
+            {
+                tab = value;
+                Invalidate(); // Force repaint
+            }
+        }
         public Image Icon
         {
             get => icon;
@@ -43,12 +57,12 @@ namespace Productivity_Signal.Core.Components
                 Invalidate(); // Forces redraw
             }
         }
-        public bool Click
+        public bool Clicked
         {
-            get => click;
+            get => clicked;
             set
             {
-                click = value;
+                clicked = value;
                 Invalidate(); // Forces redraw
             }
         }
@@ -93,7 +107,7 @@ namespace Productivity_Signal.Core.Components
 
             if (selected)
             {
-                if (click)
+                if (clicked)
                 {
                     primaryBrush = new SolidBrush(Theme.PrimaryClick);
                     secondaryBrush = new SolidBrush(Theme.Tertiary);
@@ -115,7 +129,7 @@ namespace Productivity_Signal.Core.Components
             else
             {
 
-                if (click)
+                if (clicked)
                 {
                     primaryBrush = new SolidBrush(Theme.SecondaryClick);
                     secondaryBrush = new SolidBrush(Theme.SecondaryClick);
@@ -145,15 +159,15 @@ namespace Productivity_Signal.Core.Components
         private async void clickAnim()
         {
             await Task.Delay(100);
-            Click = false;
+            Clicked = false;
         }
 
         // In your NavigationButton class
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e); // Important to allow external subscribers
-
-            Click = true;
+            ButtonClicked?.Invoke(this, e);
+            Clicked = true;
             
         }
 

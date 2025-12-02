@@ -53,10 +53,16 @@
       <DependentUpon>NavigationButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Components\Session.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Core\Components\Session.Designer.cs">
       <DependentUpon>Session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Components\Tab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Components\Tab.Designer.cs">
+      <DependentUpon>Tab.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\ProductivitySignal.cs">
       <SubType>Form</SubType>
@@ -67,6 +73,9 @@
     <Compile Include="Core\Program.cs" />
     <Compile Include="Core\UI\Theme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Core\Components\Session.resx">
+      <DependentUpon>Session.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core\ProductivitySignal.resx">
       <DependentUpon>ProductivitySignal.cs</DependentUpon>
     </EmbeddedResource>

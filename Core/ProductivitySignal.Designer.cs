@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.navigationButton3 = new Productivity_Signal.Core.Components.NavigationButton();
             this.navigationButton2 = new Productivity_Signal.Core.Components.NavigationButton();
             this.navigationButton1 = new Productivity_Signal.Core.Components.NavigationButton();
-            this.navigationButton3 = new Productivity_Signal.Core.Components.NavigationButton();
+            this.Tab_Session = new Productivity_Signal.Core.Components.Session();
             this.pnlNavigation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,46 +42,57 @@
             this.pnlNavigation.Controls.Add(this.navigationButton3);
             this.pnlNavigation.Controls.Add(this.navigationButton2);
             this.pnlNavigation.Controls.Add(this.navigationButton1);
-            this.pnlNavigation.Location = new System.Drawing.Point(-6, -4);
+            this.pnlNavigation.Location = new System.Drawing.Point(0, 0);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(270, 768);
+            this.pnlNavigation.Size = new System.Drawing.Size(272, 762);
             this.pnlNavigation.TabIndex = 0;
-            // 
-            // navigationButton2
-            // 
-            this.navigationButton2.Click = false;
-            this.navigationButton2.Hover = false;
-            this.navigationButton2.Icon = global::Productivity_Signal.Properties.Resources.graphIcon;
-            this.navigationButton2.Location = new System.Drawing.Point(6, 322);
-            this.navigationButton2.Name = "navigationButton2";
-            this.navigationButton2.Selected = false;
-            this.navigationButton2.Size = new System.Drawing.Size(265, 100);
-            this.navigationButton2.TabIndex = 1;
-            this.navigationButton2.Text = "Analytics";
-            // 
-            // navigationButton1
-            // 
-            this.navigationButton1.Click = false;
-            this.navigationButton1.Hover = false;
-            this.navigationButton1.Icon = global::Productivity_Signal.Properties.Resources.cameraIcon;
-            this.navigationButton1.Location = new System.Drawing.Point(6, 222);
-            this.navigationButton1.Name = "navigationButton1";
-            this.navigationButton1.Selected = true;
-            this.navigationButton1.Size = new System.Drawing.Size(265, 100);
-            this.navigationButton1.TabIndex = 0;
-            this.navigationButton1.Text = "Start Session";
             // 
             // navigationButton3
             // 
-            this.navigationButton3.Click = false;
+            this.navigationButton3.Clicked = false;
             this.navigationButton3.Hover = false;
             this.navigationButton3.Icon = global::Productivity_Signal.Properties.Resources.settingsIcon;
             this.navigationButton3.Location = new System.Drawing.Point(6, 422);
             this.navigationButton3.Name = "navigationButton3";
             this.navigationButton3.Selected = false;
             this.navigationButton3.Size = new System.Drawing.Size(265, 100);
+            this.navigationButton3.Tab = null;
             this.navigationButton3.TabIndex = 2;
             this.navigationButton3.Text = "Settings";
+            // 
+            // navigationButton2
+            // 
+            this.navigationButton2.Clicked = false;
+            this.navigationButton2.Hover = false;
+            this.navigationButton2.Icon = global::Productivity_Signal.Properties.Resources.graphIcon;
+            this.navigationButton2.Location = new System.Drawing.Point(6, 322);
+            this.navigationButton2.Name = "navigationButton2";
+            this.navigationButton2.Selected = false;
+            this.navigationButton2.Size = new System.Drawing.Size(265, 100);
+            this.navigationButton2.Tab = null;
+            this.navigationButton2.TabIndex = 1;
+            this.navigationButton2.Text = "Analytics";
+            // 
+            // navigationButton1
+            // 
+            this.navigationButton1.Clicked = false;
+            this.navigationButton1.Hover = false;
+            this.navigationButton1.Icon = global::Productivity_Signal.Properties.Resources.cameraIcon;
+            this.navigationButton1.Location = new System.Drawing.Point(6, 222);
+            this.navigationButton1.Name = "navigationButton1";
+            this.navigationButton1.Selected = true;
+            this.navigationButton1.Size = new System.Drawing.Size(265, 100);
+            this.navigationButton1.Tab = this.Tab_Session;
+            this.navigationButton1.TabIndex = 0;
+            this.navigationButton1.Text = "Start Session";
+            // 
+            // Tab_Session
+            // 
+            this.Tab_Session.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.Tab_Session.Location = new System.Drawing.Point(272, 0);
+            this.Tab_Session.Name = "Tab_Session";
+            this.Tab_Session.Size = new System.Drawing.Size(1097, 769);
+            this.Tab_Session.TabIndex = 1;
             // 
             // ProductivitySignal
             // 
@@ -88,6 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(1364, 761);
+            this.Controls.Add(this.Tab_Session);
             this.Controls.Add(this.pnlNavigation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ProductivitySignal";
@@ -103,6 +116,7 @@
         private Core.Components.NavigationButton navigationButton1;
         private Core.Components.NavigationButton navigationButton2;
         private Core.Components.NavigationButton navigationButton3;
+        private Core.Components.Session Tab_Session;
     }
 }
 

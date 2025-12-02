@@ -13,12 +13,35 @@ namespace Productivity_Signal
 {
     public partial class ProductivitySignal : Form
     {
+        private NavigationButton[] buttons;
+
         public ProductivitySignal()
         {
             InitializeComponent();
-            Session session = new Session();
-            this.Controls.Add(session);
-            session.BringToFront();
+
+            foreach(Control ctrl in Controls)
+            {
+                if(ctrl is NavigationButton btn)
+                {
+                    buttons.Append(btn);
+                    btn.ButtonClicked += navigate;
+                }
+            }
+        }
+
+        private void navigate(Object sender, EventArgs e)
+        {
+            foreach (NavigationButton btn in buttons)
+            {
+                if (btn == (NavigationButton)sender)
+                {
+                    btn.Selected = true;
+                }
+                else
+                {
+                    btn.Selected = false;
+                }
+            }
         }
     }
 }

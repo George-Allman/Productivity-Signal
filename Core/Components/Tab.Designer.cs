@@ -1,6 +1,6 @@
 ﻿namespace Productivity_Signal.Core.Components
 {
-    partial class Session
+    partial class Tab
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Session
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "Session";
-            this.ResumeLayout(false);
-
         }
 
         #endregion
