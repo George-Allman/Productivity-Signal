@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Components\Analytics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Components\Analytics.Designer.cs">
+      <DependentUpon>Analytics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Core\Components\NavigationButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Core\Components\Session.Designer.cs">
       <DependentUpon>Session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Components\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Components\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Components\Tab.cs">
       <SubType>UserControl</SubType>
@@ -73,8 +85,14 @@
     <Compile Include="Core\Program.cs" />
     <Compile Include="Core\UI\Theme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Core\Components\Analytics.resx">
+      <DependentUpon>Analytics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core\Components\Session.resx">
       <DependentUpon>Session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\Components\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core\ProductivitySignal.resx">
       <DependentUpon>ProductivitySignal.cs</DependentUpon>

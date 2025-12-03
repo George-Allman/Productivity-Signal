@@ -13,34 +13,34 @@ namespace Productivity_Signal
 {
     public partial class ProductivitySignal : Form
     {
-        private NavigationButton[] buttons;
+        private int numButtons = 3;
+        private NavigationButton[] buttons; 
 
         public ProductivitySignal()
         {
             InitializeComponent();
 
-            foreach(Control ctrl in Controls)
+            buttons = new NavigationButton[numButtons];
+            int i = 0;
+
+            foreach(Control ctrl in pnlNavigation.Controls)
             {
-                if(ctrl is NavigationButton btn)
+                if (ctrl is NavigationButton btn && i < numButtons)
                 {
-                    buttons.Append(btn);
+                    buttons[i] = btn;
                     btn.ButtonClicked += navigate;
+                    i++;
                 }
             }
+            Console.WriteLine(buttons[0]);
         }
 
         private void navigate(Object sender, EventArgs e)
         {
             foreach (NavigationButton btn in buttons)
             {
-                if (btn == (NavigationButton)sender)
-                {
-                    btn.Selected = true;
-                }
-                else
-                {
-                    btn.Selected = false;
-                }
+                btn.Selected = false;
+                Console.WriteLine("Hello");
             }
         }
     }

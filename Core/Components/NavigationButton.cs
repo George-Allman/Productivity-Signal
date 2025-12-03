@@ -168,7 +168,8 @@ namespace Productivity_Signal.Core.Components
             base.OnClick(e); // Important to allow external subscribers
             ButtonClicked?.Invoke(this, e);
             Clicked = true;
-            
+            Selected = true;
+            Tab.BringToFront();
         }
 
 
